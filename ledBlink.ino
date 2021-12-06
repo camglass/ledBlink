@@ -1,16 +1,15 @@
-int ledPin = 13;
-int ledPin2 = 14;
+int ledPins[] = {13, 14, 15};
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPins[0], OUTPUT);
+  pinMode(ledPins[1], OUTPUT);
+  pinMode(ledPins[2], OUTPUT);
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);
-  digitalWrite(ledPin2, HIGH);
+  int randomI = random(3);
+  digitalWrite(ledPins[randomI], HIGH);
   delay(500);
-  digitalWrite(ledPin, LOW);
-  digitalWrite(ledPin2, HIGH);
+  digitalWrite(ledPins[randomI], LOW);
   delay(500);
 }
