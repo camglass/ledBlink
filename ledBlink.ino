@@ -1,9 +1,7 @@
 int ledPins[] = {13, 14, 15};
 
 void setup() {
-  pinMode(ledPins[0], OUTPUT);
-  pinMode(ledPins[1], OUTPUT);
-  pinMode(ledPins[2], OUTPUT);
+  for (int i=0; i<3; i++) pinMode(ledPins[i], OUTPUT);
 }
 
 void loop() {
